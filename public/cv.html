@@ -591,13 +591,28 @@
                     <div class="reveal glass-card p-8 rounded-2xl">
                         <h3 class="text-xl font-bold mb-4 flex items-center gap-2 text-slate-50 font-display">
                             <span class="material-symbols-outlined text-[var(--primary)]">campaign</span>
-                            Ponencias y conferencias (2025-2026)
+                            Ponencias, conferencias y webinars (2025-2026)
                         </h3>
                         <ul class="space-y-4 text-slate-300 text-sm ml-8 hidden">
                             <!-- Old list hidden for reference, replaced by grid below -->
                         </ul>
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 ml-0 md:ml-8">
+                            <!-- Webinar Cátedra Cajasiete -->
+                            <div class="glass-panel p-6 rounded-xl border border-white/10 hover:-translate-y-1 hover:shadow-xl hover:shadow-black/50 transition-all duration-300 flex flex-col h-full relative overflow-hidden group/card">
+                                <div class="w-full aspect-video bg-gray-800 rounded-lg mb-4 flex items-center justify-center overflow-hidden relative">
+                                    <img src="./foto-webinar.jpg" alt="Webinar Cátedra Cajasiete" class="w-full h-full object-cover transition-transform duration-500 group-hover/card:scale-105" />
+                                </div>
+                                <h4 class="text-slate-200 font-bold text-lg mb-1">Cátedra Cajasiete Big Data, Open Data y Blockchain</h4>
+                                <p class="text-[var(--primary)] text-sm mb-3">Universidad de la Laguna • On line, abr. 2026</p>
+                                <p class="text-slate-400 text-sm flex-grow mb-4">Webinar: IA en 3 clics: soluciones de código abierto para Entidades Locales</p>
+                                <div class="flex gap-2 mt-auto">
+                                    <a href="https://www.youtube.com/watch?v=y8wg32D9lY8&t=3608s" target="_blank" class="flex-1 bg-white/10 hover:bg-white/20 text-slate-200 text-xs py-2 rounded-lg flex items-center justify-center gap-1 transition-colors">
+                                        <span class="material-symbols-outlined text-[16px]">play_circle</span> Ver webinar
+                                    </a>
+                                </div>
+                            </div>
+
                             <!-- SOCINFO -->
                             <div class="glass-panel p-6 rounded-xl border border-white/10 hover:-translate-y-1 hover:shadow-xl hover:shadow-black/50 transition-all duration-300 flex flex-col h-full relative overflow-hidden group/card">
                                 <div class="w-full aspect-video bg-gray-800 rounded-lg mb-4 flex items-center justify-center overflow-hidden relative">
@@ -632,10 +647,25 @@
                                 </div>
                             </div>
 
+                            <!-- Local.IA -->
+                            <div class="glass-panel p-6 rounded-xl border border-white/10 hover:-translate-y-1 hover:shadow-xl hover:shadow-black/50 transition-all duration-300 flex flex-col h-full relative overflow-hidden group/card">
+                                <div class="w-full aspect-video bg-gray-800 rounded-lg mb-4 flex items-center justify-center overflow-hidden relative">
+                                    <img src="./foto local.ia.jpg" alt="Local.IA" class="w-full h-full object-cover transition-transform duration-500 group-hover/card:scale-105" />
+                                </div>
+                                <h4 class="text-slate-200 font-bold text-lg mb-1">Jornadas sobre la IA en el mundo local. Local.IA</h4>
+                                <p class="text-[var(--primary)] text-sm mb-3">Diputación de Barcelona • Barcelona, nov. 2025</p>
+                                <p class="text-slate-400 text-sm flex-grow mb-4">Ponencia: Diseño e implementación de una arquitectura de IA soberana en código abierto para entidades supramunicipales.</p>
+                                <div class="flex gap-2 mt-auto">
+                                    <a href="https://es.slideshare.net/slideshow/diseno-e-implementacion-de-una-arquitectura-de-ia-soberana-en-codigo-abierto-para-entidades-supramunicipales/286504692" target="_blank" class="flex-1 bg-white/10 hover:bg-white/20 text-slate-200 text-xs py-2 rounded-lg flex items-center justify-center gap-1 transition-colors">
+                                        <span class="material-symbols-outlined text-[16px]">open_in_new</span> Ver presentación
+                                    </a>
+                                </div>
+                            </div>
+
                             <!-- Toggle Button -->
                             <div class="col-span-full flex justify-center py-4">
                                 <button onclick="togglePonencias()" id="toggle-ponencias-btn" class="px-6 py-2 bg-[var(--bg-dark)] border border-white/10 hover:border-[var(--primary)] text-[var(--primary)] hover:text-red-400 rounded-full font-medium transition-all duration-300 shadow-lg flex items-center gap-2">
-                                    <span>Ver todas las ponencias y conferencias</span>
+                                    <span>Ver todas las ponencias, conferencias y webinars</span>
                                     <span class="material-symbols-outlined text-sm transition-transform duration-300" id="toggle-ponencias-icon">expand_more</span>
                                 </button>
                             </div>
@@ -650,21 +680,6 @@
                                 <p class="text-slate-400 text-sm flex-grow mb-4">Ponencia: Un futuro para el rural. Cuidados, innovación e Inteligencia Artificial.</p>
                                 <div class="flex gap-2 mt-auto">
                                     <a href="https://es.slideshare.net/slideshow/un-futuro-para-el-rural-cuidados-innovacion-e-inteligencia-artificial/286504569" target="_blank" class="flex-1 bg-white/10 hover:bg-white/20 text-slate-200 text-xs py-2 rounded-lg flex items-center justify-center gap-1 transition-colors">
-                                        <span class="material-symbols-outlined text-[16px]">open_in_new</span> Ver presentación
-                                    </a>
-                                </div>
-                            </div>
-
-                            <!-- Local.IA -->
-                            <div class="more-ponencias-item hidden glass-panel p-6 rounded-xl border border-white/10 hover:-translate-y-1 hover:shadow-xl hover:shadow-black/50 transition-all duration-300 flex flex-col h-full relative overflow-hidden group/card">
-                                <div class="w-full aspect-video bg-gray-800 rounded-lg mb-4 flex items-center justify-center overflow-hidden relative">
-                                    <img src="./foto local.ia.jpg" alt="Local.IA" class="w-full h-full object-cover transition-transform duration-500 group-hover/card:scale-105" />
-                                </div>
-                                <h4 class="text-slate-200 font-bold text-lg mb-1">Jornadas sobre la IA en el mundo local. Local.IA</h4>
-                                <p class="text-[var(--primary)] text-sm mb-3">Diputación de Barcelona • Barcelona, nov. 2025</p>
-                                <p class="text-slate-400 text-sm flex-grow mb-4">Ponencia: Diseño e implementación de una arquitectura de IA soberana en código abierto para entidades supramunicipales.</p>
-                                <div class="flex gap-2 mt-auto">
-                                    <a href="https://es.slideshare.net/slideshow/diseno-e-implementacion-de-una-arquitectura-de-ia-soberana-en-codigo-abierto-para-entidades-supramunicipales/286504692" target="_blank" class="flex-1 bg-white/10 hover:bg-white/20 text-slate-200 text-xs py-2 rounded-lg flex items-center justify-center gap-1 transition-colors">
                                         <span class="material-symbols-outlined text-[16px]">open_in_new</span> Ver presentación
                                     </a>
                                 </div>
@@ -742,6 +757,20 @@
                                 </div>
                             </div>
 
+                            <!-- Analizador de ayudas y subvenciones -->
+                            <div class="glass-panel p-6 rounded-xl border border-white/10 hover:-translate-y-1 hover:shadow-xl hover:shadow-black/50 transition-all duration-300 flex flex-col h-full relative overflow-hidden group/card cursor-pointer" onclick="openAppModal('analizador-ayudas')">
+                                <div class="w-full aspect-video bg-gray-800 rounded-lg mb-4 flex items-center justify-center overflow-hidden relative">
+                                    <img src="./img/apps/analizador-ayudas.jpg" alt="Analizador de ayudas y subvenciones" class="w-full h-full object-cover transition-transform duration-500 group-hover/card:scale-105" />
+                                </div>
+                                <h4 class="text-slate-200 font-bold text-lg mb-1">Analizador de ayudas y subvenciones</h4>
+                                <p class="text-slate-400 text-sm flex-grow mb-4">Herramienta institucional avanzada diseñada para automatizar el análisis de convocatorias de subvenciones, ayudas y fondos públicos utilizando Inteligencia Artificial.</p>
+                                <div class="flex gap-2 mt-auto">
+                                    <button class="flex-1 bg-white/10 hover:bg-white/20 text-slate-200 text-xs py-2 rounded-lg flex items-center justify-center gap-1 transition-colors font-medium">
+                                        <span class="material-symbols-outlined text-[16px]">info</span> Saber más
+                                    </button>
+                                </div>
+                            </div>
+
                             <!-- Monitor BOE -->
                             <div class="glass-panel p-6 rounded-xl border border-white/10 hover:-translate-y-1 hover:shadow-xl hover:shadow-black/50 transition-all duration-300 flex flex-col h-full relative overflow-hidden group/card cursor-pointer" onclick="openAppModal('monitor-boe')">
                                 <div class="w-full aspect-video bg-gray-800 rounded-lg mb-4 flex items-center justify-center overflow-hidden relative">
@@ -777,6 +806,34 @@
                                 </div>
                                 <h4 class="text-slate-200 font-bold text-lg mb-1">Calculadora LCSP Lugo</h4>
                                 <p class="text-slate-400 text-sm flex-grow mb-4">Herramienta web para el cálculo automatizado de plazos administrativos establecidos en la Ley 9/2017, de Contratos del Sector Público (LCSP), adaptada al calendario festivo de Lugo y la Comunidad Autónoma de Galicia (en desarrollo)</p>
+                                <div class="flex gap-2 mt-auto">
+                                    <button class="flex-1 bg-white/10 hover:bg-white/20 text-slate-200 text-xs py-2 rounded-lg flex items-center justify-center gap-1 transition-colors font-medium">
+                                        <span class="material-symbols-outlined text-[16px]">info</span> Saber más
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Asistente de notas de prensa -->
+                            <div class="glass-panel p-6 rounded-xl border border-white/10 hover:-translate-y-1 hover:shadow-xl hover:shadow-black/50 transition-all duration-300 flex flex-col h-full relative overflow-hidden group/card cursor-pointer" onclick="openAppModal('asistente-notas')">
+                                <div class="w-full aspect-video bg-gray-800 rounded-lg mb-4 flex items-center justify-center overflow-hidden relative">
+                                    <img src="./img/apps/asistente-notas.jpg" alt="Asistente de notas de prensa" class="w-full h-full object-cover transition-transform duration-500 group-hover/card:scale-105" />
+                                </div>
+                                <h4 class="text-slate-200 font-bold text-lg mb-1">Asistente de notas de prensa</h4>
+                                <p class="text-slate-400 text-sm flex-grow mb-4">Herramienta diseñada como prueba de concepto para el Gabinete de Comunicación de la Diputación de Lugo, con el objetivo de redactar borradores de notas de prensa y contenido para redes sociales.</p>
+                                <div class="flex gap-2 mt-auto">
+                                    <button class="flex-1 bg-white/10 hover:bg-white/20 text-slate-200 text-xs py-2 rounded-lg flex items-center justify-center gap-1 transition-colors font-medium">
+                                        <span class="material-symbols-outlined text-[16px]">info</span> Saber más
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- The AI Island Challenge -->
+                            <div class="glass-panel p-6 rounded-xl border border-white/10 hover:-translate-y-1 hover:shadow-xl hover:shadow-black/50 transition-all duration-300 flex flex-col h-full relative overflow-hidden group/card cursor-pointer" onclick="openAppModal('ai-island-challenge')">
+                                <div class="w-full aspect-video bg-gray-800 rounded-lg mb-4 flex items-center justify-center overflow-hidden relative">
+                                    <img src="./img/apps/AI-challenge.jpg" alt="The AI Island Challenge" class="w-full h-full object-cover transition-transform duration-500 group-hover/card:scale-105" />
+                                </div>
+                                <h4 class="text-slate-200 font-bold text-lg mb-1">The AI Island Challenge</h4>
+                                <p class="text-slate-400 text-sm flex-grow mb-4">Minijuego de aventura gráfica estilo SCUMM (Monkey Island) para servir como ejemplo básico de cómo divulgar conceptos del Reglamento Europeo de IA de forma gamificada y sencilla</p>
                                 <div class="flex gap-2 mt-auto">
                                     <button class="flex-1 bg-white/10 hover:bg-white/20 text-slate-200 text-xs py-2 rounded-lg flex items-center justify-center gap-1 transition-colors font-medium">
                                         <span class="material-symbols-outlined text-[16px]">info</span> Saber más
@@ -868,6 +925,10 @@
                             Cursos especializados
                         </h3>
                         <ul class="space-y-4 text-slate-300 text-sm ml-8">
+                            <li class="flex gap-3">
+                                <span class="material-symbols-outlined text-slate-500 text-lg shrink-0">menu_book</span>
+                                <div>Protección de Datos y Seguridad en IoT, Big Data e IA - Asociación Española para la Calidad (AEC) • 40 horas • 2026</div>
+                            </li>
                             <li class="flex gap-3">
                                 <span class="material-symbols-outlined text-slate-500 text-lg shrink-0">menu_book</span>
                                 <div>Desafíos y oportunidades de la IA: modelos de gobernanza y herramientas generativas para la innovación pública - CLAD-SEGIB (MOOC Internacional) • 52 horas • 2026</div>
@@ -1102,10 +1163,10 @@
             });
             
             if (isHidden) {
-                span.textContent = 'Ver menos ponencias';
+                span.textContent = 'Ver menos ponencias, conferencias y webinars';
                 icon.style.transform = 'rotate(180deg)';
             } else {
-                span.textContent = 'Ver todas las ponencias y conferencias';
+                span.textContent = 'Ver todas las ponencias, conferencias y webinars';
                 icon.style.transform = 'rotate(0deg)';
             }
         }
@@ -1351,6 +1412,55 @@
                 ],
                 github: 'https://github.com/ariaslombardero/The-AI-island-challenge',
                 web: 'https://islandchallengeai.vercel.app/'
+            },
+            'asistente-notas': {
+                title: 'Asistente de notas de prensa',
+                desc: 'Herramienta diseñada como prueba de concepto para el Gabinete de Comunicación de la Diputación de Lugo, con el objetivo de redactar borradores de notas de prensa y contenido para redes sociales.',
+                icon: 'edit_document',
+                features: [
+                    'Generación inteligente — Redacción de borradores de notas de prensa a partir de texto libre o documentos subidos (PDF, Word, TXT).',
+                    'Adaptación estratégica a Redes Sociales — Creación automática de posts optimizados para Instagram, Facebook y X con tono narrativo y mejores prácticas de cada plataforma.',
+                    'Privacidad "Bring Your Own Key" (BYOK) — Configuración segura de la API Key de Gemini directamente desde la interfaz de la aplicación, sin necesidad de archivos de configuración externos.',
+                    'Reglas avanzadas para RRSS — Formateo automático de hilos para X (Twitter) respetando límites de caracteres y optimización de emojis.',
+                    'Banco de Hashtags — Generación de hashtags relevantes con funcionalidad de copiado rápido con un solo clic.',
+                    'Traducción instantánea — Cambio fluido entre Gallego y Castellano sin necesidad de regenerar el contenido desde cero gracias a un sistema de caché inteligente.',
+                    'Títulos alternativos — Sugerencia de múltiples opciones de titulares atractivos para cada nota de prensa.',
+                    'Historial local — Guardado automático de los trabajos anteriores en el navegador para poder recuperarlos en cualquier momento.',
+                    'Diseño premium UI/UX — Interfaz limpia, accesible y totalmente adaptativa (responsive) para escritorio y dispositivos móviles.'
+                ],
+                github: 'https://github.com/ariaslombardero/Asistente-notas-de-prensa',
+                web: 'https://notasprensa.vercel.app/'
+            },
+            'ai-island-challenge': {
+                title: 'The AI Island Challenge',
+                desc: 'Minijuego de aventura gráfica estilo SCUMM (Monkey Island) para servir como ejemplo básico de cómo divulgar conceptos del Reglamento Europeo de IA de forma gamificada y sencilla',
+                icon: 'sports_esports',
+                features: [
+                    'Diseño retro y motor SCUMM — Interfaz clásica inspirada en Monkey Island, con panel de verbos (Mirar, Usar, Hablar a, Ir a...) y un sistema de inventario totalmente funcional.',
+                    'Puzles normativos — 4 niveles de juego basados directamente en los niveles de riesgo del RIA (Mínimo, Limitado, Alto e Inaceptable).',
+                    'Totalmente autocontenido — Toda la lógica, gráficos (SVG inline), diálogos y animaciones están empaquetados en un único archivo HTML, garantizando un despliegue y portabilidad inmediatos.',
+                    'Experiencia inmersiva y accesible — Uso integrado de CSS3 para animaciones precisas y sistema de diálogos interactivos que el usuario puede avanzar con clics fluidos.',
+                    'Rigor legal — Adaptación lúdica pero fiel de artículos clave (Art. 5, Art. 10, Art. 50) y referencias a la guía de gestión de riesgos de la AESIA.'
+                ],
+                github: 'https://github.com/ariaslombardero/The-AI-island-challenge',
+                web: 'https://islandchallengeai.vercel.app/'
+            },
+            'analizador-ayudas': {
+                title: 'Analizador de ayudas y subvenciones',
+                desc: 'Herramienta institucional avanzada diseñada para automatizar el análisis de convocatorias de subvenciones, ayudas y fondos públicos utilizando Inteligencia Artificial.',
+                icon: 'document_scanner',
+                features: [
+                    'Extracción Inteligente — Procesa PDF, Word (.docx) y texto plano para extraer automáticamente presupuestos, plazos, beneficiarios y criterios de valoración.',
+                    'Sistema de Scoring — Calcula un "Score de Encaje" (0-10) basado en la relevancia territorial, elegibilidad institucional y alineación estratégica.',
+                    'Trazabilidad y Modo Auditoría — Añade marcadores de confianza a cada dato extraído.',
+                    'Privacidad "Bring Your Own Key" (BYOK) y Modelos Locales — Configuración segura de la API Key de Gemini o uso de modelos alojados localmente.',
+                    'Traducción instantánea — Cambio fluido entre Gallego y Castellano de la interfaz y los análisis en tiempo real mediante streaming.',
+                    'Exportación Profesional — Generación de informes en formato Word (DOCX) con saltos de página inteligentes, y formato de impresión optimizado en PDF.',
+                    'Integración JSON — Genera automáticamente bloques JSON estructurados listos para alimentar bases de datos o dashboards.',
+                    'Historial local — Guardado automático de los análisis anteriores en el navegador.'
+                ],
+                github: 'https://github.com/ariaslombardero/Analizador-de-ayudas-y-subvenciones',
+                web: 'https://subvenciones-ia.vercel.app/'
             }
         };
 
