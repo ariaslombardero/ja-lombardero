@@ -328,10 +328,14 @@
                         </p>
                         
                         <div class="flex flex-wrap gap-4">
-                            <a href="mailto:jose@ariaslombardero.es" class="px-8 py-3 bg-[var(--primary)] hover:bg-red-600 text-slate-200 rounded-full font-medium transition-all duration-300 shadow-[0_0_20px_rgba(255,51,51,0.3)] flex items-center gap-2">
+                            <a href="mailto:jose@ariaslombardero.es" class="px-8 py-3 bg-[var(--primary)] hover:bg-red-600 text-slate-200 rounded-full font-medium transition-all duration-300 shadow-[0_0_20px_rgba(255,51,51,0.3)] hover:shadow-[0_0_30px_rgba(255,51,51,0.4)] flex items-center gap-2">
                                 Contactar
                                 <span class="material-symbols-outlined text-sm">send</span>
                             </a>
+                            <button onclick="openVideoModal()" class="px-8 py-3 bg-white/5 hover:bg-white/10 border border-white/20 text-slate-200 rounded-full font-medium transition-all duration-300 hover:border-slate-300 flex items-center gap-2 group backdrop-blur-sm">
+                                <span class="material-symbols-outlined text-[var(--primary)] group-hover:scale-110 transition-transform">play_circle</span>
+                                Ver presentación
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -1247,6 +1251,16 @@
         });
     </script>
 
+    <!-- Video Modal -->
+    <div id="video-modal" class="fixed inset-0 z-[100] bg-black/90 backdrop-blur-sm flex items-center justify-center hidden opacity-0 transition-opacity duration-300 p-4">
+        <button onclick="closeVideoModal()" class="absolute top-6 right-6 text-slate-400 hover:text-white transition-colors p-2 rounded-full hover:bg-white/10 z-10 flex items-center justify-center bg-black/50 border border-white/10">
+            <span class="material-symbols-outlined text-2xl">close</span>
+        </button>
+        <div class="bg-[#0a0a0a] border border-white/10 rounded-2xl w-full max-w-5xl aspect-video relative overflow-hidden shadow-2xl shadow-black/80 transform scale-95 transition-transform duration-300" id="video-modal-content">
+            <iframe id="promotional-video" src="" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen class="absolute top-0 left-0 w-full h-full"></iframe>
+        </div>
+    </div>
+
     <!-- App Modal -->
     <div id="app-modal" class="fixed inset-0 z-[100] bg-black/80 backdrop-blur-sm flex items-center justify-center hidden opacity-0 transition-opacity duration-300 p-4">
         <div class="bg-[#0a0a0a] border border-white/10 rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-hidden flex flex-col relative shadow-2xl shadow-black/50 transform scale-95 transition-transform duration-300" id="app-modal-content">
@@ -1467,7 +1481,49 @@
                     }
                 });
             }
+
+            const videoModal = document.getElementById('video-modal');
+            if(videoModal) {
+                videoModal.addEventListener('click', (e) => {
+                    if (e.target === videoModal) {
+                        closeVideoModal();
+                    }
+                });
+            }
         });
+
+        function openVideoModal() {
+            const modal = document.getElementById('video-modal');
+            const modalContent = document.getElementById('video-modal-content');
+            const iframe = document.getElementById('promotional-video');
+            
+            // Set source dynamically when opening to autoplay 
+            iframe.src = "https://player.vimeo.com/video/1188057315?title=0&byline=0&portrait=0&autoplay=1&color=ffffff";
+            
+            modal.classList.remove('hidden');
+            // Trigger reflow
+            void modal.offsetWidth;
+            modal.classList.remove('opacity-0');
+            modalContent.classList.remove('scale-95');
+            
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeVideoModal() {
+            const modal = document.getElementById('video-modal');
+            const modalContent = document.getElementById('video-modal-content');
+            const iframe = document.getElementById('promotional-video');
+            
+            modal.classList.add('opacity-0');
+            modalContent.classList.add('scale-95');
+            
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                document.body.style.overflow = '';
+                // Stop video
+                iframe.src = "";
+            }, 300);
+        }
     </script>
 </body>
 </html>
